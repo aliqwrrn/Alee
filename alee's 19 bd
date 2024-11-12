@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на ДР</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #00ff00;
+            font-family: monospace;
+            padding: 20px;
+        }
+        .terminal {
+            max-width: 600px;
+            margin: auto;
+            background-color: #000;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .command-line {
+            display: flex;
+            align-items: center;
+        }
+        .prompt {
+            color: #00ff00;
+            margin-right: 5px;
+        }
+        .button {
+            background-color: #00ff00;
+            color: #1e1e1e;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #007f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <div class="command-line">
+            <span class="prompt">&gt; echo "Приглашение на ДР"</span>
+        </div>
+        <p>Привет! 🥳<br>
+        Ты приглашен на празднование моего дня рождения в ресторан! 🎉<br>
+        Когда: 30 ноября, 19:00<br>
+        Где: [Название ресторана]<br>
+        Тема: IT-вечеринка 💻</p>
+        <div class="command-line">
+            <span class="prompt">&gt; read -p "Примешь участие? (Y/N): "</span>
+            <button class="button" onclick="confirmAttendance()">Принять участие</button>
+        </div>
+        <p id="response"></p>
+    </div>
+
+    <script>
+        function confirmAttendance() {
+            document.getElementById("response").textContent = "Отлично! Жду тебя на празднике! 🎈";
+        }
+    </script>
+</body>
+</html>
